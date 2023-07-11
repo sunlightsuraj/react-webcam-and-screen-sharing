@@ -5,8 +5,8 @@ const AssessmentPage = () => {
 	// width to the value defined here, but the height will be
 	// calculated based on the aspect ratio of the input stream.
 	const width = 220;	// We will scale the photo width to this
-	const [height, setHeight] = useState(0);	// This will be computed based on the input stream
-	const [heightCamera, setHeightCamera] = useState(0);	// This will be computed based on the input stream
+	// const [height, setHeight] = useState(0);	// This will be computed based on the input stream
+	// const [heightCamera, setHeightCamera] = useState(0);	// This will be computed based on the input stream
 
 	// |streaming| indicates whether or not we're currently streaming
 	// video from the camera. Obviously, we start at false.
@@ -65,7 +65,7 @@ const AssessmentPage = () => {
 		setTimeout(() => {
 			if (!streaming) {
 				let _height = getScreenVideoHeight();
-				setHeight(_height);
+				// setHeight(_height);
 
 				video.current.setAttribute("width", width);
 				video.current.setAttribute("height", _height);
@@ -109,7 +109,7 @@ const AssessmentPage = () => {
 		setTimeout(() => {
 			if (!streamingCamera) {
 				let _height = getCameraVideoHeight();
-				setHeight(_height);
+				// setHeight(_height);
 
 				videoCamera.current.setAttribute("width", width);
 				videoCamera.current.setAttribute("height", _height);
