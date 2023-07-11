@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.camera-container {
+	right: 5px;
+	top: 5px;
+	position: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.video-container {
+	display: flex;
+	flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.camera {
+	width: 240px;
+	display: inline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#video, #videoCamera {
+	border: 1px solid black;
+	box-shadow: 2px 2px 3px black;
+	width: 220px;
+	height: 140px;
 }
 
-.App-link {
-  color: #61dafb;
+#photo, #photoCamera {
+	border: 1px solid black;
+	box-shadow: 2px 2px 3px black;
+	width: 220px;
+	height: 140px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#canvas, #canvasCamera {
+	display: none;
+}
+
+.output-container {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: flex;
+}
+
+.output {
+	width: 240px;
+	display: inline-block;
+}
+
+#startbutton, #startbuttonCamera {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 32px;
+	background-color: rgba(0, 150, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+	font-family: "Lucida Grande", "Arial", sans-serif;
+	color: rgba(255, 255, 255, 1);
+}
+
+.contentarea {
+	font-size: 16px;
+	font-family: "Lucida Grande", "Arial", sans-serif;
+	width: 760px;
 }
